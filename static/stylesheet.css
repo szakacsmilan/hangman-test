@@ -8,3 +8,17 @@ h1 {
     width: 150px;
 
 }
+
+.new-game {
+    margin-left: 60px;
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.abc-btn {
+    margin:20px;
+    height: 60px;
+    width: 60px;
+}
