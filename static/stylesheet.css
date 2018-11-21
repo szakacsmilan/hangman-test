@@ -22,3 +22,15 @@ h1 {
     height: 60px;
     width: 60px;
 }
+
+.lines {
+    border-bottom: 5px black solid;
+    width: 40px;
+    margin-right: 10px;
+
+}
+
+#wordline {
+    margin-top: 80px;
+    margin-left: 33%;
+}
