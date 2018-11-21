@@ -52,7 +52,7 @@ body {
 }
 
 #play-button {
-    margin: 200px;
+    margin: 20px;
     height: 60px;
     width: 200px;
 
@@ -61,4 +61,16 @@ body {
 .h1 {
     font-family: 'Open Sans', sans-serif;
     color: #6eb6de;
+}
+
+#sign-up-button {
+    margin: 20px;
+    height: 60px;
+    width: 200px;
+}
+
+#sign-in-button {
+    margin: 20px;
+    height: 60px;
+    width: 200px;
 }

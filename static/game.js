@@ -14,6 +14,8 @@ document.getElementById("play-button").addEventListener("click", function(){
     document.querySelector('.abc-button').style.display='block';
     document.getElementById("new-game-button").style.display='block';
     document.getElementById("play-button").style.display='none';
+    document.getElementById("sign-up-button").style.display='none';
+    document.getElementById("sign-in-button").style.display='none';
 });
 
 showAbcButtons();
