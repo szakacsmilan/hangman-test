@@ -10,14 +10,12 @@ function showAbcButtons() {
 }
 
 
-let showAndHideButtons = document.getElementById("play-button").addEventListener("click", displayButtons);
+document.getElementById("play-button").addEventListener("click", function(){
+    document.querySelector('.abc-button').style.display='block';
+    document.getElementById("new-game-button").style.display='block';
+    document.getElementById("play-button").style.display='none';
+});
 
-
-function displayButtons() {
-
-}
-
-
-showAbcButtons()
+showAbcButtons();
 
 
