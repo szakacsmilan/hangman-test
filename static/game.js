@@ -8,5 +8,7 @@ function showAbcButtons() {
         buttons.innerHTML += new_button;
     }
 }
-
+let showAndHideButtons = document.getElementById("play-button").addEventListener("click", displayButtons);
 showAbcButtons()
+
+

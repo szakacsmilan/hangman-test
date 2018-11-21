@@ -2,14 +2,15 @@
 
 {% block content %}
 <div>
-<button type="button" class="btn btn-outline-primary new-game">New game</button>
+<button id="new-game-button" type="button" class="btn btn-outline-primary new-game">New game</button>
   <div class="row">
     <div class="col hang-pictures">
           <img src="../static/hangman.jpg">
     </div>
     <div class="col abc-buttons">
-        <div class="abc-button">
-            <button type="button" class="btn btn-primary abc-btn">A</button>
+        <div> <button id="play-button" type="button" class="btn btn-outline-primary play-game change">Play game</button></div>
+        <div class="abc-button" style="display: none">
+            <button id="abc-buttons" type="button" class="btn btn-primary abc-btn">A</button>
         </div>
     </div>
   </div>
