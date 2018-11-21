@@ -4,7 +4,7 @@ app = Flask(__name__)
 app.secret_key = 'malac'
 
 
-@app.route('/game', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def game_page():
     return render_template('game.html')
 
