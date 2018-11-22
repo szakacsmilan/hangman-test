@@ -24,10 +24,10 @@
     </div>
 </div>
 <div class="row" id="wordline" style="display: none">
-    {% for line in range(wordlenght) %}
+    {% for line in range(first_name_length) %}
     <div class="lines" id={{ line }}>
     </div>
     {% endfor %}
 </div>
-<div id="word" style="display: none">{{ word }}</div>
+<div id="word" >{{ first_name }}</div>
 {% endblock %}
