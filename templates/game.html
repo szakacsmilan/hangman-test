@@ -8,9 +8,15 @@
             <img src="../static/hangman.jpg">
         </div>
         <div class="col abc-buttons">
-            <div> <button id="play-button" type="button" class="btn btn-outline-primary play-game">Play game</button></div>
-            <div> <button id="sign-up-button" type="button" class="btn btn-outline-primary">Sign up</button></div>
-            <div> <button id="sign-in-button" type="button" class="btn btn-outline-primary">Login</button></div>
+            <div>
+                <button id="play-button" type="button" class="btn btn-outline-primary play-game">Play game</button>
+            </div>
+            <div>
+                <button id="sign-up-button" type="button" class="btn btn-outline-primary">Sign up</button>
+            </div>
+            <div>
+                <button id="sign-in-button" type="button" class="btn btn-outline-primary">Login</button>
+            </div>
             <div class="abc-button" style="display: none">
                 <button id="abc-buttons" type="button" class="btn btn-primary abc-btn">A</button>
             </div>
@@ -18,10 +24,10 @@
     </div>
 </div>
 <div class="row" id="wordline">
-        {% for line in range(wordlenght) %}
-            <div class="lines" id={{ line }}>
-            </div>
-        {% endfor %}
+    {% for line in range(wordlenght) %}
+    <div class="lines" id={{ line }}>
     </div>
-    <div id="word" style="display: none">{{ word }}</div>
+    {% endfor %}
+</div>
+<div id="word" style="display: none">{{ word }}</div>
 {% endblock %}

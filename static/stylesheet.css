@@ -41,9 +41,6 @@ body {
     margin-left: 60px;
 }
 
-.row {
-    margin-top: 30px;
-}
 
 .abc-btn {
     margin: 20px;
@@ -83,6 +80,6 @@ body {
 }
 
 #wordline {
-    margin-top: 80px;
     margin-left: 33%;
+    margin-bottom: 500px;
 }
