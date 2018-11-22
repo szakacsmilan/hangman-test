@@ -45,7 +45,7 @@ function changeCharacters() {
                     validCharCounter += 1
                 }
             }
-            if (validCharCounter == 7) {
+            if (validCharCounter == word.length) {
                 incorrectAnswer += 1;
                 if (incorrectAnswer<7) {
                     changePicture()
