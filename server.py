@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
-app.secret_key = 'malac'
+app.secret_key = "malac"
 
-@app.route('/game', methods=['GET', 'POST'])
+@app.route('/')
 def game_page():
-    return render_template('game.html')
+    word = 'kiscica'
+    word = word.upper()
+    wordlenght = len(word)
+    return render_template('game.html', wordlenght=wordlenght, word=word)
 
 
 if __name__ == '__main__':
