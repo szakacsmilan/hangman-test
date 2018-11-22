@@ -24,6 +24,7 @@ showAbcButtons();
 function changePicture() {
     document.getElementById('pict').src='../static/hangman'+incorrectAnswer+'.png'
 }
+
 var incorrectAnswer = 1;
 function changeCharacters() {
     let buttons = document.querySelectorAll('.abc-btn');
@@ -50,8 +51,9 @@ function changeCharacters() {
                 if (incorrectAnswer<7) {
                     changePicture()
                 } else {
-                    let lose = document.getElementById('butts')
-                    lose.innerText = 'You lose'
+                    let div = document.getElementById('abc-button')
+                    div.setAttribute('class', 'lose')
+                    div.innerText = 'YOU LOSE!!!'
                 }
             }
         })
