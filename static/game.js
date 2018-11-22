@@ -16,7 +16,7 @@ document.getElementById("play-button").addEventListener("click", function(){
     document.getElementById("play-button").style.display='none';
     document.getElementById("sign-up-button").style.display='none';
     document.getElementById("sign-in-button").style.display='none';
-    document.getElementById('wordline').style.display='block';
+    document.getElementById('wordline').style.display='flex';
 });
 
 showAbcButtons();
@@ -28,9 +28,13 @@ function changeCharacters() {
     console.log(word);
     for (button of buttons) {
         let buttonCharacter = button.innerText;
+        let btn = button;
         button.addEventListener('click', function () {
+            btn.disabled = true;
             for (let i = 0; i < word.length; i++) {
+                console.log(word[i]);
                 if (word[i] == buttonCharacter) {
+                    console.log(i);
                     i = i.toString();
                     let linenumber = document.getElementById(i);
                     linenumber.innerHTML = buttonCharacter;
