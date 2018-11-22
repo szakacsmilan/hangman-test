@@ -1,26 +1,24 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div>
-<button type="button" class="btn btn-outline-primary new-game">New game</button>
-  <div class="row">
-    <div class="col hang-pictures">
-          <img src="../static/hangman.jpg">
-    </div>
-    <div class="col abc-buttons">
-        <div class="abc-button">
-            <button type="button" class="btn btn-primary abc-btn">A</button>
+    <div>
+        <button type="button" class="btn btn-outline-primary new-game">New game</button>
+        <div class="row">
+            <div class="col hang-pictures">
+                <img src="../static/hangman.jpg">
+            </div>
+            <div class="col abc-buttons">
+                <div class="abc-button">
+                    <button type="button" class="btn btn-primary abc-btn">A</button>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-</div>
-<div class="row" id="wordline">
-    {% for line in range(wordlenght) %}
-    <div class="lines" id={{line}}>
+    <div class="row" id="wordline">
+        {% for line in range(wordlenght) %}
+            <div class="lines" id={{ line }}>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
-<div id="word" style="display: none">
-    {{word}}
-</div>
+    <div id="word" style="display: none">{{ word }}</div>
 {% endblock %}

@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
-app.secret_key = 'malac'
+app.secret_key = "malac"
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def game_page():
     word = 'kiscica'
     word = word.upper()
