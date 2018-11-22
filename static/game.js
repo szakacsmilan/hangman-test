@@ -35,6 +35,7 @@ function changeCharacters() {
         button.addEventListener('click', function () {
             btn.disabled = true;
             let validCharCounter = 0;
+            btn.disabled = true;
             for (let i = 0; i < word.length; i++) {
                 if (word[i] == buttonCharacter) {
                     i = i.toString();
@@ -55,6 +56,7 @@ function changeCharacters() {
             }
         })
     }
+
 }
 
 changeCharacters();
