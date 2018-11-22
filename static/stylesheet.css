@@ -88,3 +88,8 @@ body {
     margin-left: 33%;
     margin-bottom: 500px;
 }
+
+img {
+    width: 600px;
+    height: 600px;
+}
