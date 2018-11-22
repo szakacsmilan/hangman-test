@@ -28,7 +28,9 @@ function changeCharacters() {
     console.log(word);
     for (button of buttons) {
         let buttonCharacter = button.innerText;
+        let btn = button;
         button.addEventListener('click', function () {
+            btn.disabled = true;
             for (let i = 0; i < word.length; i++) {
                 if (word[i] == buttonCharacter) {
                     i = i.toString();
