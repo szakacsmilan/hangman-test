@@ -76,6 +76,11 @@ body {
     border-bottom: 5px black solid;
     width: 40px;
     margin-right: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color:#6eb6de;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 5px;
 
 }
 
