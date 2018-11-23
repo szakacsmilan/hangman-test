@@ -2,23 +2,27 @@
 
 {% block content %}
 <div>
-    <button style="display: none" id="new-game-button" type="button" class="btn btn-outline-primary">New game</button>
+    <button style="display: none" id="new-game-button" type="button" class="btn btn-outline-secondary"
+            onclick="window.location.reload()">New game
+    </button>
     <div class="row">
-        <div class="col hang-pictures">
-            <img src="../static/hangman.jpg">
+        <div class="col">
+            <div class="hang-pictures">
+                <img id="pict" src="../static/hangman1.png">
+            </div>
         </div>
-        <div class="col abc-buttons">
+        <div class="col abc-buttons" id="butts">
             <div>
-                <button id="play-button" type="button" class="btn btn-outline-primary play-game">Play game</button>
+                <button id="play-button" type="button" class="btn btn-outline-secondary play-game">Play game</button>
             </div>
             <div>
-                <button id="sign-up-button" type="button" class="btn btn-outline-primary">Sign up</button>
+                <button id="sign-up-button" type="button" class="btn btn-outline-secondary">Sign up</button>
             </div>
             <div>
-                <button id="sign-in-button" type="button" class="btn btn-outline-primary">Login</button>
+                <button id="sign-in-button" type="button" class="btn btn-outline-secondary">Login</button>
             </div>
-            <div class="abc-button" style="display: none">
-                <button id="abc-buttons" type="button" class="btn btn-primary abc-btn">A</button>
+            <div class="abc-button" id ='abc-button' style="display: none">
+                <button id="abc-buttons" type="button" class="btn btn-secondary abc-btn">A</button>
             </div>
         </div>
     </div>
@@ -28,10 +32,11 @@
     <div class="lines" id={{ line }}>
     </div>
     {% endfor %}
-    {% for line in range(last_name_length+1) %}
-    <div class="lines last_name" id={{ first_name_length-1+line }}>
+    <div id="space"> </div>
+    {% for line in range(last_name_length) %}
+    <div class="lines_last_name" id={{ first_name_length+line }}>
     </div>
     {% endfor %}
 </div>
-<div id="word" >{{ first_name+last_name }}</div>
+<div id="word" style="display: none">{{ first_name+last_name }}</div>
 {% endblock %}

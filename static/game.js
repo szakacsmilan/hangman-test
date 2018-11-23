@@ -10,18 +10,22 @@ function showAbcButtons() {
 }
 
 
-document.getElementById("play-button").addEventListener("click", function(){
-    document.querySelector('.abc-button').style.display='block';
-    document.getElementById("new-game-button").style.display='block';
-    document.getElementById("play-button").style.display='none';
-    document.getElementById("sign-up-button").style.display='none';
-    document.getElementById("sign-in-button").style.display='none';
-    document.getElementById('wordline').style.display='flex';
+document.getElementById("play-button").addEventListener("click", function () {
+    document.querySelector('.abc-button').style.display = 'block';
+    document.getElementById("new-game-button").style.display = 'block';
+    document.getElementById("play-button").style.display = 'none';
+    document.getElementById("sign-up-button").style.display = 'none';
+    document.getElementById("sign-in-button").style.display = 'none';
+    document.getElementById('wordline').style.display = 'flex';
 });
 
 showAbcButtons();
 
+function changePicture() {
+    document.getElementById('pict').src='../static/hangman'+incorrectAnswer+'.png'
+}
 
+var incorrectAnswer = 1;
 function changeCharacters() {
     let buttons = document.querySelectorAll('.abc-btn');
     let word = document.querySelector('#word').innerText;
@@ -31,13 +35,25 @@ function changeCharacters() {
         let btn = button;
         button.addEventListener('click', function () {
             btn.disabled = true;
+            let validCharCounter = 0;
+            btn.disabled = true;
             for (let i = 0; i < word.length; i++) {
-                console.log(word[i]);
                 if (word[i] == buttonCharacter) {
-                    console.log(i);
                     i = i.toString();
                     let linenumber = document.getElementById(i);
                     linenumber.innerHTML = buttonCharacter;
+                } else {
+                    validCharCounter += 1
+                }
+            }
+            if (validCharCounter == word.length) {
+                incorrectAnswer += 1;
+                if (incorrectAnswer<7) {
+                    changePicture()
+                } else {
+                    let div = document.getElementById('abc-button')
+                    div.setAttribute('class', 'lose')
+                    div.innerText = 'YOU LOSE!!!'
                 }
             }
         })
